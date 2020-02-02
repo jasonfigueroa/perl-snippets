@@ -18,10 +18,11 @@ sub main {
     print Dumper @colors;
 }
 
-# Any manipulation to the array here will not affect the array in main
 sub Append1ToAllValues {
     
     my $TwoDArrayRef = shift;
+    
+    # creating a local copy of the array
     my @TwoDArray = @{$TwoDArrayRef};
 
     my $lengthOfTwoDArray = scalar @TwoDArray;

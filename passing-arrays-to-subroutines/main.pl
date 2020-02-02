@@ -11,14 +11,12 @@ sub main {
     print Dumper @colors;
 }
 
-# Any manipulation to the array here will not affect the array in main, that 
-# is why we return it here
 sub ChangeSecondColor {
     
     # getting reference to array
     my $strArrayRef = shift;
 
-    # capturing array
+    # creating a local copy of the array
     my @strArray = @{$strArrayRef};
 
     $strArray[1] = "pink";
